@@ -1,5 +1,5 @@
 <mvc:View xmlns:control="sap.gantt.control" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ey.fin.ap.controller.View1">
-    <Page title="All Products">
+    <Page title="Ananya">
         <headerContent>
             <Button tooltip="Go to the Next Screen" icon="sap-icon://arrow-right" press="onNext"></Button>
         </headerContent>
