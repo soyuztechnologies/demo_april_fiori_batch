@@ -1,0 +1,36 @@
+<mvc:View xmlns:control="sap.gantt.control" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ey.fin.ap.controller.View1">
+    <Page title="View 1">
+        <headerContent>
+            <Button tooltip="Go to the Next Screen" icon="sap-icon://arrow-right" press="onNext"></Button>
+        </headerContent>
+        <content>
+            <SearchField id="idSearch" search="onSearch"></SearchField>
+            <List id="idFruits" selectionChange="onItemSelect" growing="true" growingThreshold="10"
+            items="{path: '/ProductSet'}" 
+            mode="SingleSelectMaster" delete="onDelete">
+                <headerToolbar>
+                    <Toolbar>
+                        <Button icon="sap-icon://delete" tooltip="Delete Selected Items" press="onDeleteMultiple"></Button>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem title="{NAME}" intro="{PRODUCT_ID}" number="{PRICE}" numberUnit="{CURRENCY_CODE}"
+                                    icon="sap-icon://product">
+                        <attributes>
+                            <ObjectAttribute title="Category" text="{CATEGORY}"></ObjectAttribute>
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus text="{SUPPLIER_NAME}" ></ObjectStatus>
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button icon="sap-icon://add" tooltip="Add new product" press="onAdd"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

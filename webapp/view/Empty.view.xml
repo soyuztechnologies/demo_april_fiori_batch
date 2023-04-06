@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.ey.fin.ap.controller.Empty">
+    <Page title="Empty">
+        <Image src="https://media.vanityfair.com/photos/598b1452f7f0a433bd4d149c/4:3/w_1756,h_1317,c_limit/t-ducktales-woohoo-song.png"></Image>
+    </Page>
+</mvc:View>

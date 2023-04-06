@@ -1,0 +1,67 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core"
+    xmlns="sap.m" controllerName="com.ey.fin.ap.controller.Add">
+    <Page title="Manage Product">
+        <content>
+            <f:SimpleForm id="SimpleFormChange354"
+                        editable="true"
+                        layout="ResponsiveGridLayout"
+                        title="Product Management"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="4"
+                        emptySpanL="4"
+                        emptySpanM="4"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" >
+                        <f:content>
+                            <Label text="Product Id" />
+                            <Input id="prodId" value="{prod>/prodData/PRODUCT_ID}" submit="onEnter"/>
+                            <Button icon="sap-icon://burglary" tooltip="Load most Extensive product"
+                            press="onExpLoad" type="Attention"></Button>
+                            <Label text="Name/Description" />
+                            <Input value="{prod>/prodData/NAME}">
+                            </Input>
+                            <Input value="{prod>/prodData/DESCRIPTION}">
+                                <layoutData>
+                                    <l:GridData span="XL1 L2 M2 S4" />
+                                </layoutData>
+                            </Input>
+                            <Label text="Supplier Id" />
+                            <Input value="{prod>/prodData/SUPPLIER_ID}" showValueHelp="true" valueHelpRequest="onF4Help"/>
+                            <Text id="idSuppName"></Text>
+                            <Label text="Price/Currency" />
+                            <Input value="{prod>/prodData/PRICE}">
+                                <layoutData>
+                                    <l:GridData span="XL1 L2 M2 S4" />
+                                </layoutData>
+                            </Input>
+                            <Input value="{prod>/prodData/CURRENCY_CODE}" />
+                            <Label text="Category" />
+                            <Select id="cat" selectedKey="{prod>/prodData/CATEGORY}">
+                                <items>
+                                    <core:Item text="Notebooks" key="Notebooks"/>
+                                    <core:Item text="Projectors" key="Projectors"/>
+                                    <core:Item text="Mice" key="Mice"/>
+                                </items>
+                            </Select>
+                        </f:content>
+                    </f:SimpleForm>
+        </content>
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button id="idSave" text="Save" type="Accept" press="onSave" icon="sap-icon://save"></Button>
+                <Button id="idDelete" text="Delete" enabled="false" type="Reject" press="onDelete" icon="sap-icon://delete"></Button>
+                <Button text="Clear" type="Emphasized" press="onClear" icon="sap-icon://cancel"></Button>
+            </Toolbar>
+        </footer>
+
+    </Page>
+</mvc:View>
