@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
           xmlns:f="sap.ui.layout.form" controllerName="com.ey.fin.ap.controller.View2">
     <mvc:content>
-        <Page title="Product Details" showNavButton="true" navButtonPress="onBack">
+        <Page title="Anubhav Title" showNavButton="true" navButtonPress="onBack">
             <content>
                 <!-- <Button text="Back" icon="sap-icon://arrow-left" press="onBack"></Button> -->
                 <ObjectHeader title="{PRODUCT_ID} - {NAME}" intro="{DESCRIPTION}" number="{PRICE}"
